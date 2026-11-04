@@ -9,6 +9,12 @@
 This repository hosts NOTORYX Connect builds. Get the latest from **[Releases](../../releases)**. The source code is at [TheLogsAreScreaming/notoryx-connect](https://github.com/TheLogsAreScreaming/notoryx-connect) (GPL-3.0).
 
 <p align="center">
+  <img src="images/home.png" width="190" alt="Home: field console, trip plan, check-in and hold for SOS">
+  <img src="images/trip.png" width="190" alt="Plan your trip: contacts, overdue alert and check-in reminder">
+  <img src="images/beacons.png" width="190" alt="Mesh beacons heard, and sending one by hand">
+  <img src="images/discovery.png" width="190" alt="Local mesh discovery planner">
+</p>
+<p align="center">
   <img src="images/nodes.png" width="190" alt="Nodes: scan for radios and connect">
   <img src="images/chats.png" width="190" alt="Chats: channel and direct messages with quick replies">
   <img src="images/tools.png" width="190" alt="Tools: battery runtime, RSSI guide and deployment checklist">
@@ -20,6 +26,7 @@ This repository hosts NOTORYX Connect builds. Get the latest from **[Releases](.
 Most mesh apps are built for poking at radios at your desk. NOTORYX Connect is built for when you're out there and the cell bars are gone.
 
 - **It's built for the field.** A dark, high-contrast interface with big targets, a deployment checklist, battery runtime math, an incident log and check-in templates. Everything you reach for at the trailhead is one tap from the bottom bar.
+- **It watches your back.** Plan a trip with up to 6 contacts, check in with one tap, and **hold for SOS** to repeat a call for help until someone answers. The team map shows where each contact was last heard, how long ago, and the trail they took.
 - **It doesn't pretend.** Every radio setting you save is read back from the radio before the app calls it done. If the radio didn't take the change, you'll know. Delivery states come from real routing acknowledgments, not a hopeful checkmark.
 - **Your messages don't vanish.** Type with no radio connected and they queue on the phone, then go out when the link comes back. History, queues and nodes are kept separately for every radio you own.
 - **It stays connected.** A background service keeps the Bluetooth link up with the screen off, and it reconnects on its own when you walk back into range or flip Bluetooth back on.
@@ -28,6 +35,12 @@ Most mesh apps are built for poking at radios at your desk. NOTORYX Connect is b
 - **It's free and open source.** GPL-3.0, independently built, with its own identity.
 
 ## Everything it does
+
+### Trip safety
+- **Home** tab with a field console: radio status, node count and battery.
+- **Plan your trip:** up to 6 trip contacts, an overdue alert (30 min to 8 h) and a check-in reminder.
+- **Check in** with one tap: I'm OK, At camp, Delayed or Heading back. Each goes to every trip contact as a direct message with the time, your position and battery. You see who it reached and can resend to the rest.
+- **Hold for SOS** for 2 seconds (TalkBack users get a confirmation instead). It goes to your trip contacts and optionally a channel, repeats every 5 minutes up to 12 times, stops when a contact answers, and **I'm safe** sends an all-clear.
 
 ### Connecting
 - Scan for nearby radios with live Bluetooth signal strength, then connect in one tap.
@@ -45,6 +58,10 @@ Most mesh apps are built for poking at radios at your desk. NOTORYX Connect is b
 - Message timeline and received-signal (SNR) history for the session.
 - Chat history (newest 500 per radio), queues and nodes kept separately for each radio.
 - Optional message notifications.
+- Emoji reactions (long-press a message), a draft saved for each conversation, and a **via MQTT** label on messages that came over the internet.
+- **Ignore** or **mute** a node, and hide messages containing words you choose. An SOS reply from a trip contact is never missed, even if you ignored them.
+- Optional automatic deletion of old channel messages (direct messages are kept) and reading new messages aloud.
+- App-icon shortcuts: Check in / SOS, Chats, Nodes and Map.
 
 ### Nodes and NodeDex
 - Live mesh node list with mesh health and signal for the session.
@@ -55,6 +72,10 @@ Most mesh apps are built for poking at radios at your desk. NOTORYX Connect is b
 
 ### Maps and location
 - Map of node positions and waypoints from the mesh. Create your own waypoints too.
+- **Team view:** each trip contact's status (fresh, stale or lost), distance, direction and battery, with the position's age on their pin.
+- **Trails** of where your trip contacts and you have been over the last 24 hours.
+- **Export GPX** of waypoints and trails to open in other mapping apps.
+- **Units:** miles and feet, or kilometers and meters, set from your region by default.
 - OpenStreetMap areas you've viewed are cached offline for a year.
 - Opt-in phone location sharing, with optional rounding (about 360 m, 1.5 km or 6 km) before it leaves the phone.
 - Low-power field mode, which lowers GPS accuracy and update rate to save battery.
@@ -68,6 +89,8 @@ Most mesh apps are built for poking at radios at your desk. NOTORYX Connect is b
 - **Coverage history:** record where you were and the signal (SNR and RSSI) you received from each node, then export it as CSV. It keeps up to 2,000 readings for 30 days and stops on its own when you disconnect.
 - **Range test** log with signal and distance for each packet, and gaps that show lost packets.
 - **Store & forward:** replay messages you missed from a router node.
+- **Mesh beacons:** see the beacons your radio hears, review and join a channel a beacon offers, or send a beacon by hand (up to once an hour).
+- **Local mesh discovery** (read-only for now): plan a listen across LoRa presets and see the nodes your radio has already heard.
 
 ### Field alerts (phone notifications only, nothing is sent over the mesh)
 - Low battery on your radio or a favorite, at a threshold you set.
@@ -99,20 +122,24 @@ Most mesh apps are built for poking at radios at your desk. NOTORYX Connect is b
   <img src="images/privacy.png" width="190" alt="Privacy and data: what's stored and what's sent">
   <img src="images/radio_backup.png" width="190" alt="Encrypted radio backup">
   <img src="images/phone_backup.png" width="190" alt="Phone data backup">
-  <img src="images/settings_light.png" width="190" alt="Settings in the light theme">
+  <img src="images/settings.png" width="190" alt="Settings: appearance, units, filters and messages">
 </p>
 
 > NOTORYX Connect is a beta, checked on one radio (a Seeed T1000-E) so far. Don't rely on it as your only way to call for help.
 
 ## Which file do I need?
 
-Download the `…-arm64.apk` from the latest release (ARM64 Android phones). Releases may also include an `.aab` (for the Play Store, not for installing directly), checksums in `SHA256SUMS.txt`, and device test guides.
+Download the `NOTORYX-Connect-<version>-<build>.apk` from the latest release (ARM64 Android phones). Releases also include an `.aab` (for the Play Store, not for installing directly), checksums in `SHA256SUMS.txt`, and signing details in `SIGNATURE.txt`.
+
+Betas are marked as pre-releases, so look through the **[Releases](../../releases)** list rather than only at "Latest".
 
 ## Install on Android
 
 1. On your phone, open the latest release and download the `.apk`.
 2. Open the file. If Android asks, allow installs from your browser or file manager.
 3. Open NOTORYX Connect and allow **Bluetooth**, **location** and **notifications** when asked.
+
+**Updating?** Newer betas install over older ones and keep your data. Don't uninstall first.
 
 **Coming from v0.1.3-beta.1 or earlier?** The app ID is changing from `org.backcountrysignal.bastion` to `com.bastionmesh.connect`, so the next release installs as a separate app. In the old app, make a backup (**Settings → Phone data backup / restore**), install the new app, restore the backup there, then uninstall the old one. You only do this once.
 
