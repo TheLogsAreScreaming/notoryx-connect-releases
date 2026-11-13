@@ -63,9 +63,9 @@ Most mesh apps are built for poking at radios at your desk. NOTORYX Connect is b
 - Optional automatic deletion of old channel messages (direct messages are kept) and reading new messages aloud.
 - App-icon shortcuts: Check in / SOS, Chats, Nodes and Map.
 
-### Nodes and NodeDex
+### Nodes and NodeVault
 - Live mesh node list with mesh health and signal for the session.
-- **NodeDex:** every node your radios have heard, saved on the phone, with favorites and your own notes.
+- **NodeVault:** every node your radios have heard, saved on the phone, with favorites and your own notes.
 - Node details: telemetry, position, signal history and neighbors.
 - Request position or telemetry from a node.
 - **Traceroute** with the SNR of every hop.
@@ -110,7 +110,7 @@ Most mesh apps are built for poking at radios at your desk. NOTORYX Connect is b
 
 ### Backups and privacy
 - **Encrypted radio backup and restore:** settings, all channel slots, owner names and modules, encrypted with AES-256-GCM (PBKDF2, 600,000 iterations). Preview before restoring, then the result is read back from the radio. Device identity keys and session credentials are never included.
-- **Encrypted phone data backup** to a file: chats and queues for every radio, NodeDex, waypoints, field records and settings. Perfect for moving to a new phone. Restore rolls back if anything fails.
+- **Encrypted phone data backup** to a file: chats and queues for every radio, NodeVault, waypoints, field records and settings. Perfect for moving to a new phone. Restore rolls back if anything fails.
 - **Privacy & data** screen that lists exactly what's stored and what's sent, with buttons to delete chat history or all phone data.
 
 ### Look and feel
