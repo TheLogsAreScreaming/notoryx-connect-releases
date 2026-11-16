@@ -4,22 +4,24 @@
 
 # NOTORYX Connect downloads
 
-**An independent Android field app for LoRa mesh radios running Meshtastic® firmware.** Part of the **NOTORYX** off-grid communications family. **No Towers. No Limits.**
+**An independent field app for LoRa mesh radios running Meshtastic® firmware, for Android, macOS and Windows.** Part of the **NOTORYX** off-grid communications family. **No Towers. No Limits.**
 
 This repository hosts NOTORYX Connect builds. Get the latest from **[Releases](../../releases)**. The source code is at [TheLogsAreScreaming/notoryx-connect](https://github.com/TheLogsAreScreaming/notoryx-connect) (GPL-3.0).
 
 <p align="center">
-  <img src="images/home.png" width="190" alt="Home: field console, trip plan, check-in and hold for SOS">
+  <img src="images/home.png" width="190" alt="Home: field console with the demo radio connected, check-in and hold for SOS">
   <img src="images/trip.png" width="190" alt="Plan your trip: contacts, overdue alert and check-in reminder">
   <img src="images/beacons.png" width="190" alt="Mesh beacons heard, and sending one by hand">
   <img src="images/discovery.png" width="190" alt="Local mesh discovery planner">
 </p>
 <p align="center">
-  <img src="images/nodes.png" width="190" alt="Nodes: scan for radios and connect">
-  <img src="images/chats.png" width="190" alt="Chats: channel and direct messages with quick replies">
-  <img src="images/tools.png" width="190" alt="Tools: battery runtime, RSSI guide and deployment checklist">
+  <img src="images/nodes.png" width="190" alt="Nodes: the demo mesh's node list">
+  <img src="images/chats.png" width="190" alt="Chats: new message with channel picker, Send later and quick replies">
+  <img src="images/tools.png" width="190" alt="Tools: connection doctor, timeline, checklists and automations">
   <img src="images/field_records.png" width="190" alt="Field records: incident log, templates, coverage and bot safeguards">
 </p>
+
+<sub>Screenshots are from the app's built-in demo mode (a pretend radio and mesh).</sub>
 
 ## Why NOTORYX Connect?
 
@@ -29,10 +31,26 @@ Most mesh apps are built for poking at radios at your desk. NOTORYX Connect is b
 - **It watches your back.** Plan a trip with up to 6 contacts, check in with one tap, and **hold for SOS** to repeat a call for help until someone answers. The team map shows where each contact was last heard, how long ago, and the trail they took.
 - **It doesn't pretend.** Every radio setting you save is read back from the radio before the app calls it done. If the radio didn't take the change, you'll know. Delivery states come from real routing acknowledgments, not a hopeful checkmark.
 - **Your messages don't vanish.** Type with no radio connected and they queue on the phone, then go out when the link comes back. History, queues and nodes are kept separately for every radio you own.
-- **It stays connected.** A background service keeps the Bluetooth link up with the screen off, and it reconnects on its own when you walk back into range or flip Bluetooth back on.
+- **It stays connected.** Bluetooth, Wi-Fi or USB. A background service keeps the link up with the screen off, it reconnects on its own when you walk back into range, and the connection doctor explains what's wrong when it can't.
 - **Your data is yours.** No account, no analytics, no ads and no NOTORYX servers. Everything stays in the app's private storage on your phone, location sharing is opt-in and can be rounded before it leaves the phone, and backups are encrypted with your password.
 - **The bot has manners.** Bot Mode auto-replies with quiet hours, rate limits, per-node cooldowns and loop protection, so it can't spam the mesh.
-- **It's free and open source.** GPL-3.0, independently built, with its own identity.
+- **Try it without a radio.** Demo mode gives you a pretend radio and mesh to explore. Nothing is sent.
+- **It's free and open source.** GPL-3.0, independently built, with its own identity. In English, Spanish, French and German.
+
+## What's new since the first betas
+
+Everything below shipped between v1.0.0-beta.5 and v1.0.0-beta.17 (the latest, 2026-11-15). See each release for details.
+
+- **Connect over Wi-Fi or USB** as well as Bluetooth, with a **connection doctor**, **demo mode**, a home-screen widget and a Quick Settings tile.
+- **Trip readiness** check, airtime-aware SOS, a **check-in delivery map**, zone and off-route alerts, **day replay** of team positions, and a shareable trip plan.
+- **NodeVault** with a favorites filter, **node journal**, telemetry charts, **network diagram**, **mesh health** and node-key change alerts.
+- Map: **place search**, rally points and routes, traceroute on the map, coverage heatmap, **topo map and line-of-sight planner**, **GPX/KML/GeoJSON layers** and **offline maps from MBTiles**, plus a list view for screen readers.
+- Messaging: reactions, replies, @mentions, pins and unread markers, **forward** and **send later**, delivery receipts that say whether the radio proved delivery, hops and signal on each message, an airtime estimate while typing, and a lookalike-name warning.
+- **SALUTE** and **9-Line** report forms, **automations**, a **timeline**, offline **checklists**, and optional **community moderation** (off by default).
+- **Two-way ATAK** (asks before sharing positions), **MQTT client proxy**, **remote admin**, per-channel position precision, identity key backup and a new-radio checklist.
+- Optional **app lock** and **encrypted chat history** in an on-phone database.
+- **Eight themes** in the NOTORYX Core look, and **Spanish, French and German** translations (unreviewed).
+- **macOS and Windows** downloads.
 
 ## Everything it does
 
@@ -56,9 +74,9 @@ Most mesh apps are built for poking at radios at your desk. NOTORYX Connect is b
 - Quick replies: Copy, On my way, Need assistance, What is your position?
 - Search across all saved messages, including queued ones.
 - Message timeline and received-signal (SNR) history for the session.
-- Chat history (newest 500 per radio), queues and nodes kept separately for each radio.
+- Chat history (500 to 5,000 messages per conversation, your choice), queues and nodes kept separately for each radio.
 - Optional message notifications.
-- Emoji reactions (long-press a message), a draft saved for each conversation, and a **via MQTT** label on messages that came over the internet.
+- Emoji reactions (tap a message), a draft saved for each conversation, and a **via MQTT** label on messages that came over the internet.
 - **Ignore** or **mute** a node, and hide messages containing words you choose. An SOS reply from a trip contact is never missed, even if you ignored them.
 - Optional automatic deletion of old channel messages (direct messages are kept) and reading new messages aloud.
 - App-icon shortcuts: Check in / SOS, Chats, Nodes and Map.
@@ -114,7 +132,7 @@ Most mesh apps are built for poking at radios at your desk. NOTORYX Connect is b
 - **Privacy & data** screen that lists exactly what's stored and what's sent, with buttons to delete chat history or all phone data.
 
 ### Look and feel
-- Dark (default), light or system theme, with a NOTORYX orange accent checked for readable contrast.
+- Eight themes (Blaze is the default; Bare Beauty is the light one), with accents checked for readable contrast.
 - Hide the dashboard sections you don't use.
 - Follows your phone's text size. Status switches to an icon with a spoken label when text is large.
 
@@ -125,23 +143,30 @@ Most mesh apps are built for poking at radios at your desk. NOTORYX Connect is b
   <img src="images/settings.png" width="190" alt="Settings: appearance, units, filters and messages">
 </p>
 
-> NOTORYX Connect is a beta, checked on one radio (a Seeed T1000-E) so far. Don't rely on it as your only way to call for help.
+> NOTORYX Connect is a test beta. The latest betas were checked on one phone (a Samsung Galaxy A15) with one radio (a Seeed T1000-E). Many newer features, and the macOS and Windows builds, have automated tests but haven't been checked on a range of hardware yet. Don't rely on it as your only way to call for help.
 
 ## Which file do I need?
 
-Download the `NOTORYX-Connect-<version>-<build>.apk` from the latest release (ARM64 Android phones). Releases also include an `.aab` (for the Play Store, not for installing directly), checksums in `SHA256SUMS.txt`, and signing details in `SIGNATURE.txt`.
+| You have | Download | Notes |
+|---|---|---|
+| An Android phone (ARM64) | `NOTORYX-Connect-<version>-<build>.apk` | Signed with the release key. Check it with `SHA256SUMS.txt` and `SIGNATURE.txt` |
+| A Mac (Intel or Apple silicon) | `NOTORYX-Connect-<version>-<build>-macOS-universal.zip` | Not notarized: right-click the app and choose **Open** the first time |
+| A Windows PC (64-bit) | `NOTORYX-Connect-<version>-<build>-Windows-x64-setup.exe` or `-Windows-x64.zip` | Installs for your user, no admin needed. Not code signed, so SmartScreen warns on first launch |
 
-Betas are marked as pre-releases, so look through the **[Releases](../../releases)** list rather than only at "Latest".
+The `.aab` is for the Play Store, not for installing directly. There is no iPhone release yet.
+
+Betas are marked as pre-releases, so look through the **[Releases](../../releases)** list rather than only at "Latest". The newest is **v1.0.0-beta.17** (build 21).
 
 ## Install on Android
 
 1. On your phone, open the latest release and download the `.apk`.
 2. Open the file. If Android asks, allow installs from your browser or file manager.
 3. Open NOTORYX Connect and allow **Bluetooth**, **location** and **notifications** when asked.
+4. For a steady background link, set the app's battery use to **Unrestricted** (**Settings → Background connection** shows how).
 
 **Updating?** Newer betas install over older ones and keep your data. Don't uninstall first.
 
-**Coming from v0.1.3-beta.1 or earlier?** The app ID is changing from `org.backcountrysignal.bastion` to `com.bastionmesh.connect`, so the next release installs as a separate app. In the old app, make a backup (**Settings → Phone data backup / restore**), install the new app, restore the backup there, then uninstall the old one. You only do this once.
+**Coming from v0.1.3-beta.1 or earlier?** The app ID changed from `org.backcountrysignal.bastion` to `com.bastionmesh.connect`, so the new app installs separately. In the old app, make a backup (**Settings → Phone data backup / restore**), install the new app, restore the backup there, then uninstall the old one. You only do this once.
 
 ## About
 
