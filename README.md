@@ -6,7 +6,7 @@
 
 **An independent field app for LoRa mesh radios running Meshtastic® firmware, for Android, macOS and Windows.** Part of the **NOTORYX** off-grid communications family. **No Towers. No Limits.**
 
-This repository hosts NOTORYX Connect builds. Get the latest from **[Releases](../../releases)**. The source code is at [TheLogsAreScreaming/notoryx-connect](https://github.com/TheLogsAreScreaming/notoryx-connect) (GPL-3.0).
+This repository hosts NOTORYX Connect builds. Get the latest from **[Releases](../../releases)**. NOTORYX Connect is free software under GPL-3.0; to get the source code for any build, [open an issue](../../issues/new) here.
 
 <p align="center">
   <img src="images/home.png" width="190" alt="Home: field console with the demo radio connected, check-in and hold for SOS">
@@ -37,9 +37,24 @@ Most mesh apps are built for poking at radios at your desk. NOTORYX Connect is b
 - **Try it without a radio.** Demo mode gives you a pretend radio and mesh to explore. Nothing is sent.
 - **It's free and open source.** GPL-3.0, independently built, with its own identity. In English, Spanish, French and German.
 
-## What's new since the first betas
+## Latest: v1.0.0-beta.31 (19 November 2026)
 
-Everything below shipped between v1.0.0-beta.5 and v1.0.0-beta.17 (the latest, 2026-11-15). See each release for details.
+**[v1.0.0-beta.31](../../releases/tag/v1.0.0-beta.31)** (build 35) adds **app-wide search**: a search button on every tab finds nodes, channels, messages, saved places and settings from one box. Search and beta.30's **Discard changes?** prompt on radio settings pages were checked on a phone; jumping from a saved place to the Map hasn't been tried yet.
+
+### New since beta.17
+
+- **App-wide search** across nodes, channels, messages, places and settings (beta.31).
+- **Discard changes?** before leaving a radio settings page with unsaved edits (beta.30).
+- **Safer channel slots:** turning on an empty slot gives it its own private key instead of no encryption (beta.29).
+- **Import nodes from the Meshtastic app's** node database export (beta.28).
+- **Map:** nodes at the same spot share one pin with a count, your radio leads its own spot, a **live Traffic map** animates packets hop by hop, **range rings** around your radio and **stale-node** marking with a time you choose (beta.24 to beta.27).
+- **Notices from your radio** on Home, and new channels that start ready to use with a private key (beta.23).
+- **Nodes tab redone:** your radio as one bar at the top, nodes grouped by when they were heard, distance, hops, battery and signal on every row, search and a Favorites filter (beta.19 to beta.22).
+- **Chats redone** as a list of conversations, each with its own screen and unread count, and channel management from Chats (beta.18).
+
+## Earlier highlights
+
+Shipped between v1.0.0-beta.5 and v1.0.0-beta.17. See each release for details.
 
 - **Connect over Wi-Fi or USB** as well as Bluetooth, with a **connection doctor**, **demo mode**, a home-screen widget and a Quick Settings tile.
 - **Trip readiness** check, airtime-aware SOS, a **check-in delivery map**, zone and off-route alerts, **day replay** of team positions, and a shareable trip plan.
@@ -66,7 +81,11 @@ Everything below shipped between v1.0.0-beta.5 and v1.0.0-beta.17 (the latest, 2
 - Automatic reconnect with backoff. It respects a manual disconnect and waits for Android Bluetooth to come back on.
 - Background connection service so the link survives the screen turning off.
 
+### Search
+- One search button on every tab finds nodes (by name or node ID, with or without `!`), channels, messages (accents don't matter), saved places and settings or tools.
+
 ### Messaging
+- Chats is a list of conversations, one per channel and one per direct chat, each with its own unread count.
 - Channel and direct messages, with a thread for each node.
 - Delivery states from routing acknowledgments.
 - Offline queue: messages wait on the phone and send when the radio reconnects.
@@ -82,14 +101,18 @@ Everything below shipped between v1.0.0-beta.5 and v1.0.0-beta.17 (the latest, 2
 - App-icon shortcuts: Check in / SOS, Chats, Nodes and Map.
 
 ### Nodes and NodeVault
-- Live mesh node list with mesh health and signal for the session.
+- Live mesh node list grouped into Active now, Today and Older, with distance, hops, battery and signal on each row.
+- **Stale** marking for nodes that have gone quiet (Off, 1 h, 6 h, 24 h, 3 days or 7 days).
+- **Import nodes** from a Meshtastic app node database export.
 - **NodeVault:** every node your radios have heard, saved on the phone, with favorites and your own notes.
 - Node details: telemetry, position, signal history and neighbors.
 - Request position or telemetry from a node.
 - **Traceroute** with the SNR of every hop.
 
 ### Maps and location
-- Map of node positions and waypoints from the mesh. Create your own waypoints too.
+- Map of node positions and waypoints from the mesh. Create your own waypoints too. Nodes at the same spot share one pin.
+- **Live Traffic map:** packets your radio hears drawn hop by hop, coloured by type.
+- **Range rings** around your radio with distance labels and N/E/S/W marks.
 - **Team view:** each trip contact's status (fresh, stale or lost), distance, direction and battery, with the position's age on their pin.
 - **Trails** of where your trip contacts and you have been over the last 24 hours.
 - **Export GPX** of waypoints and trails to open in other mapping apps.
@@ -155,7 +178,7 @@ Everything below shipped between v1.0.0-beta.5 and v1.0.0-beta.17 (the latest, 2
 
 The `.aab` is for the Play Store, not for installing directly. There is no iPhone release yet.
 
-Betas are marked as pre-releases, so look through the **[Releases](../../releases)** list rather than only at "Latest". The newest is **v1.0.0-beta.17** (build 21).
+Betas are marked as pre-releases, so look through the **[Releases](../../releases)** list rather than only at "Latest". The newest is **v1.0.0-beta.31** (build 35).
 
 ## Install on Android
 
