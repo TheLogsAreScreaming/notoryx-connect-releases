@@ -41,6 +41,8 @@ Most mesh apps are built for poking at radios at your desk. NOTORYX Connect is b
 
 **[v1.0.0-beta.31](../../releases/tag/v1.0.0-beta.31)** (build 35) adds **app-wide search**: a search button on every tab finds nodes, channels, messages, saved places and settings from one box. Search and beta.30's **Discard changes?** prompt on radio settings pages were checked on a phone; jumping from a saved place to the Map hasn't been tried yet.
 
+**Coming in the next build: SARNEG code words.** Send grids, frequencies and times as letters from a code word your team agrees on, and tap a received `[SARNEG]` message to decode it. The same format and code-word QR code work in every NOTORYX app. It keeps numbers away from a casual listener; it isn't encryption. [What SARNEG is and why we added it](https://meshmayhem.org/notoryx/#sarneg).
+
 ### New since beta.17
 
 - **App-wide search** across nodes, channels, messages, places and settings (beta.31).
