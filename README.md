@@ -37,14 +37,13 @@ Most mesh apps are built for poking at radios at your desk. NOTORYX Connect is b
 - **Try it without a radio.** Demo mode gives you a pretend radio and mesh to explore. Nothing is sent.
 - **It's free and open source.** GPL-3.0, independently built, with its own identity. In English, Spanish, French and German.
 
-## Latest: v1.0.0-beta.35 (22 November 2026)
+## Latest: v1.0.0-beta.36 (22 November 2026)
 
-**[v1.0.0-beta.35](../../releases/tag/v1.0.0-beta.35)** (build 39): nodes imported from a Meshtastic node database now show in the Nodes list and the Home node count, along with nodes this phone remembers that the radio has since dropped.
-
-**Coming in the next build: the BLACKOUT look.** A new steel eagle-N app icon on every platform, and **BLACKOUT** as the default theme: matte black, charcoal, steel and frost, with color kept only for things that carry meaning (good signal, warnings, SOS). The theme list becomes BLACKOUT, Blaze, Bare Beauty, Okabe-Ito and Night Ops; anyone on a theme that was removed opens in BLACKOUT. The screenshots above already show it.
+**[v1.0.0-beta.36](../../releases/tag/v1.0.0-beta.36)** (build 40): the BLACKOUT look. A new steel eagle-N app icon on every platform, and **BLACKOUT** as the default theme: matte black, charcoal, steel and frost, with color kept only for things that carry meaning (good signal, warnings, SOS). The theme list is now BLACKOUT, Blaze, Bare Beauty, Okabe-Ito and Night Ops; anyone on a theme that was removed opens in BLACKOUT. If you were on Blaze or another kept theme, nothing changes until you pick BLACKOUT yourself. Not yet tested on radios.
 
 ### New since beta.31
 
+- **BLACKOUT look:** new app icon and BLACKOUT as the default theme; themes cut to BLACKOUT, Blaze, Bare Beauty, Okabe-Ito and Night Ops (beta.36).
 - **Imported nodes show in the Nodes list** and the Home count (beta.35).
 - **SARNEG hardening:** the clipboard, the encode/decode box and an opened decode line clear after 1 minute, a shown code word hides after 30 seconds, a **Random word** button, a warning for well-known code words, and no screenshots of the code-word screens on Android (beta.34).
 - **Frosted glass look** closer to NOTORYX Core: floating glass tab bar, a new header with the radio's status, an instrument panel and field tools on Home (beta.33).
@@ -164,7 +163,7 @@ Shipped between v1.0.0-beta.5 and v1.0.0-beta.31. See each release for details.
 - **Privacy & data** screen that lists exactly what's stored and what's sent, with buttons to delete chat history or all phone data.
 
 ### Look and feel
-- Five themes: **BLACKOUT** (the default from the next build), Blaze, Bare Beauty (light), Okabe-Ito (color-blind safe) and Night Ops (dim reds), all checked for readable contrast. Until the next build, Blaze is the default and the older eight themes are offered.
+- Five themes: **BLACKOUT** (the default), Blaze, Bare Beauty (light), Okabe-Ito (color-blind safe) and Night Ops (dim reds), all checked for readable contrast.
 - Glass cards over a backdrop you choose (theme glow, a color, a gradient or your photo), and an optional second theme for dark mode.
 - Hide the dashboard sections you don't use.
 - Follows your phone's text size. Status switches to an icon with a spoken label when text is large.
@@ -188,7 +187,7 @@ Shipped between v1.0.0-beta.5 and v1.0.0-beta.31. See each release for details.
 
 The `.aab` is for the Play Store, not for installing directly. There is no iPhone release yet.
 
-Betas are marked as pre-releases, so look through the **[Releases](../../releases)** list rather than only at "Latest". The newest is **v1.0.0-beta.35** (build 39).
+Betas are marked as pre-releases, so look through the **[Releases](../../releases)** list rather than only at "Latest". The newest is **v1.0.0-beta.36** (build 40).
 
 ## Install on Android
 
