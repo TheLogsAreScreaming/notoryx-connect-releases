@@ -37,11 +37,12 @@ Most mesh apps are built for poking at radios at your desk. NOTORYX Connect is b
 - **Try it without a radio.** Demo mode gives you a pretend radio and mesh to explore. Nothing is sent.
 - **It's free and open source.** GPL-3.0, independently built, with its own identity. In English, Spanish, French and German.
 
-## Latest: v1.0.0-beta.36 (22 November 2026)
+## Latest: v1.0.0-beta.37 (22 November 2026)
 
-**[v1.0.0-beta.36](../../releases/tag/v1.0.0-beta.36)** (build 40): the BLACKOUT look. A new steel eagle-N app icon on every platform, and **BLACKOUT** as the default theme: matte black, charcoal, steel and frost, with color kept only for things that carry meaning (good signal, warnings, SOS). The theme list is now BLACKOUT, Blaze, Bare Beauty, Okabe-Ito and Night Ops; anyone on a theme that was removed opens in BLACKOUT. If you were on Blaze or another kept theme, nothing changes until you pick BLACKOUT yourself. Not yet tested on radios.
+**[v1.0.0-beta.37](../../releases/tag/v1.0.0-beta.37)** (build 41): **drive recording**. A new **Drive** screen in More › Tools maps where the mesh reaches as you drive. It shows a live map of your trail and coverage squares (100 m or 300 m), keeps direct and relayed readings apart, and counts distance, nodes heard and squares covered. GPS keeps running with the screen off while a drive records. Drives export as GPX, KML, CSV, GeoJSON or a drive file, with the first and last 500 m left out by default. An optional two-way check is off by default. Not yet tested on radios or on a drive.
 
 ### New since beta.31
+- **Drive recording:** Drive screen with a live coverage map, direct vs relayed readings, screen-off GPS, saved drives, exports and import, and an optional two-way check (beta.37).
 
 - **BLACKOUT look:** new app icon and BLACKOUT as the default theme; themes cut to BLACKOUT, Blaze, Bare Beauty, Okabe-Ito and Night Ops (beta.36).
 - **Imported nodes show in the Nodes list** and the Home count (beta.35).
@@ -131,7 +132,7 @@ Shipped between v1.0.0-beta.5 and v1.0.0-beta.31. See each release for details.
 - **RSSI field reference:** what Bluetooth signal-strength numbers mean in practice.
 - **Incident log:** up to 500 private notes, tagged with your radio, exportable as CSV.
 - **Emergency and check-in templates** (assistance, check-in, all-clear). You fill in the details, pick a channel and review the exact text before it's sent.
-- **Coverage history:** record where you were and the signal (SNR and RSSI) you received from each node, then export it as CSV. It keeps up to 2,000 readings for 30 days and stops on its own when you disconnect.
+- **Drive recording:** record where you were and the signal (SNR and RSSI) you received from each node, with direct and relayed readings kept apart. See it live on a map of 100 m or 300 m squares, keep each drive, and export it as GPX, KML, CSV, GeoJSON or a drive file. GPS keeps running with the screen off while a drive records. Recording stops on its own when you disconnect.
 - **Range test** log with signal and distance for each packet, and gaps that show lost packets.
 - **Store & forward:** replay messages you missed from a router node.
 - **Mesh beacons:** see the beacons your radio hears, review and join a channel a beacon offers, or send a beacon by hand (up to once an hour).
@@ -187,7 +188,7 @@ Shipped between v1.0.0-beta.5 and v1.0.0-beta.31. See each release for details.
 
 The `.aab` is for the Play Store, not for installing directly. There is no iPhone release yet.
 
-Betas are marked as pre-releases, so look through the **[Releases](../../releases)** list rather than only at "Latest". The newest is **v1.0.0-beta.36** (build 40).
+Betas are marked as pre-releases, so look through the **[Releases](../../releases)** list rather than only at "Latest". The newest is **v1.0.0-beta.37** (build 41).
 
 ## Install on Android
 
