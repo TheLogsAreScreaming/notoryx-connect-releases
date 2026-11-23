@@ -37,13 +37,20 @@ Most mesh apps are built for poking at radios at your desk. NOTORYX Connect is b
 - **Try it without a radio.** Demo mode gives you a pretend radio and mesh to explore. Nothing is sent.
 - **It's free and open source.** GPL-3.0, independently built, with its own identity. In English, Spanish, French and German.
 
-## Latest: v1.0.0-beta.37 (22 November 2026)
+## Latest: v1.0.0-beta.45 (23 November 2026)
 
-**[v1.0.0-beta.37](../../releases/tag/v1.0.0-beta.37)** (build 41): **drive recording**. A new **Drive** screen in More › Tools maps where the mesh reaches as you drive. It shows a live map of your trail and coverage squares (100 m or 300 m), keeps direct and relayed readings apart, and counts distance, nodes heard and squares covered. GPS keeps running with the screen off while a drive records. Drives export as GPX, KML, CSV, GeoJSON or a drive file, with the first and last 500 m left out by default. An optional two-way check is off by default. Not yet tested on radios or on a drive.
+**[v1.0.0-beta.45](../../releases/tag/v1.0.0-beta.45)** (build 49): three small fixes. A parked drive no longer adds distance from GPS wobble. The New chat sheet stays above the keyboard. **Point me to it** and **Check terrain** are faded, with a reason, when a node has no position. Test beta.
 
 ### New since beta.31
+- **Parked drives stop adding distance**, New chat stays above the keyboard, and Point me / Check terrain explain when they are off (beta.45).
+- **Demo mode shows only its pretend nodes**, never nodes remembered from your real radio (beta.44).
+- **Node compass and terrain check** from node details, and approximate positions marked (beta.43).
+- **New chat search:** find any node your phone knows by name, short name or ID, including restored nodes, with matches shown first (beta.42, beta.43).
+- **Failed DMs say why:** a DM your radio gave up on turns to failed with a one-line reason (beta.41).
+- **Traceroute from restored nodes** works, and the trademark notice is tidied (beta.40).
+- **Drive fixes:** a parked phone keeps logging readings, GPS every 5 seconds during a drive, and the drive time keeps counting (beta.39).
+- **Battery tile** shows a plug icon on external power (beta.38).
 - **Drive recording:** Drive screen with a live coverage map, direct vs relayed readings, screen-off GPS, saved drives, exports and import, and an optional two-way check (beta.37).
-
 - **BLACKOUT look:** new app icon and BLACKOUT as the default theme; themes cut to BLACKOUT, Blaze, Bare Beauty, Okabe-Ito and Night Ops (beta.36).
 - **Imported nodes show in the Nodes list** and the Home count (beta.35).
 - **SARNEG hardening:** the clipboard, the encode/decode box and an opened decode line clear after 1 minute, a shown code word hides after 30 seconds, a **Random word** button, a warning for well-known code words, and no screenshots of the code-word screens on Android (beta.34).
@@ -188,7 +195,7 @@ Shipped between v1.0.0-beta.5 and v1.0.0-beta.31. See each release for details.
 
 The `.aab` is for the Play Store, not for installing directly. There is no iPhone release yet.
 
-Betas are marked as pre-releases, so look through the **[Releases](../../releases)** list rather than only at "Latest". The newest is **v1.0.0-beta.37** (build 41).
+Betas are marked as pre-releases, so look through the **[Releases](../../releases)** list rather than only at "Latest". The newest is **v1.0.0-beta.45** (build 49).
 
 ## Install on Android
 
