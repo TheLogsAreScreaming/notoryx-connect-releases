@@ -37,11 +37,13 @@ Most mesh apps are built for poking at radios at your desk. NOTORYX Connect is b
 - **Try it without a radio.** Demo mode gives you a pretend radio and mesh to explore. Nothing is sent.
 - **It's free and open source.** GPL-3.0, independently built, with its own identity. In English, Spanish, French and German.
 
-## Latest: v1.0.0-beta.43 (23 November 2026)
+## Latest: v1.0.0-beta.45 (23 November 2026)
 
-**[v1.0.0-beta.43](../../releases/tag/v1.0.0-beta.43)** (build 47): **Point me to it**, a node compass in node details: a big arrow that points at the node and turns with your phone, with distance and bearing. **Check terrain** opens the Link planner filled in from your radio to that node. Nodes that only share a rounded position are marked approximate. The New chat search shows matches first. Test beta.
+**[v1.0.0-beta.45](../../releases/tag/v1.0.0-beta.45)** (build 49): three small fixes. A parked drive no longer adds distance from GPS wobble. The New chat sheet stays above the keyboard. **Point me to it** and **Check terrain** are faded, with a reason, when a node has no position. Test beta.
 
 ### New since beta.31
+- **Parked drives stop adding distance**, New chat stays above the keyboard, and Point me / Check terrain explain when they are off (beta.45).
+- **Demo mode shows only its pretend nodes**, never nodes remembered from your real radio (beta.44).
 - **Node compass and terrain check** from node details, and approximate positions marked (beta.43).
 - **New chat search:** find any node your phone knows by name, short name or ID, including restored nodes, with matches shown first (beta.42, beta.43).
 - **Failed DMs say why:** a DM your radio gave up on turns to failed with a one-line reason (beta.41).
@@ -193,7 +195,7 @@ Shipped between v1.0.0-beta.5 and v1.0.0-beta.31. See each release for details.
 
 The `.aab` is for the Play Store, not for installing directly. There is no iPhone release yet.
 
-Betas are marked as pre-releases, so look through the **[Releases](../../releases)** list rather than only at "Latest". The newest is **v1.0.0-beta.43** (build 47).
+Betas are marked as pre-releases, so look through the **[Releases](../../releases)** list rather than only at "Latest". The newest is **v1.0.0-beta.45** (build 49).
 
 ## Install on Android
 
